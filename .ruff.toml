@@ -1,0 +1,9 @@
+line-length = 100
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "W"]
+ignore = ["E501"]  # line length handled by formatter/reviewer judgment, not a hard lint failure
+
+[lint.per-file-ignores]
+"tests/*" = ["F401"]  # test files sometimes import fixtures/helpers not directly referenced by name

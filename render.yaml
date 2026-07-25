@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: url-audit-service
+    runtime: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: ENV
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: HTTP_TIMEOUT_SECONDS
+        value: "5.0"
+      - key: MAX_CONCURRENT_FETCHES
+        value: "20"
+      - key: RATE_LIMIT_REQUESTS
+        value: "10"
+      - key: RATE_LIMIT_WINDOW_SECONDS
+        value: "60"
+      - key: CACHE_TTL_SECONDS
+        value: "300"
+      - key: MAX_URL_LENGTH
+        value: "2048"
+      - key: MAX_BODY_SIZE_BYTES
+        value: "10240"
+      - key: PYTHON_VERSION
+        value: "3.12.10"
