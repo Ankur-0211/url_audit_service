@@ -31,4 +31,9 @@ async def health():
 
 @router.get("/")
 async def root():
-    return {"service": "url-audit-service", "version": "1.0.0", "docs": "/docs"}
+    return {"service": "url-audit-service", 
+            "version": "1.0.0",
+            "docs": "/docs",
+            "credit": "Built for Digital Heroes Training Task",
+            "credit_url": "https://digitaheroesco.com",
+            }

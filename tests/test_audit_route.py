@@ -137,3 +137,5 @@ def test_root_endpoint(client):
     body = response.json()
     assert body["service"] == "url-audit-service"
     assert body["docs"] == "/docs"
+    assert body["credit"] == "Built for Digital Heroes Training Task"
+    assert body["credit_url"] == "https://digitaheroesco.com"

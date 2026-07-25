@@ -2,6 +2,10 @@
 
 A production-grade REST API that audits a target URL — reachability, response time, status code, basic SEO/meta signals, and security headers — built as a timed (4-hour) design-to-deploy exercise.
 
+---
+**Built for Digital Heroes Training Task** — [digitaheroesco.com](https://digitaheroesco.com)
+---
+
 **Live service:** https://url-audit-service-759m.onrender.com/
 **Docs (Swagger UI):** https://url-audit-service-759m.onrender.com//docs
 **Full architecture & design rationale:** [`docs/SOFTWARE_DESIGN_DOCUMENT.md`](docs/SOFTWARE_DESIGN_DOCUMENT.md)
@@ -163,4 +167,3 @@ Not implemented. Full written design — capacity math, architecture diagram, SL
 
 Python 3.12 · FastAPI · httpx · BeautifulSoup4 + lxml · pydantic-settings · pytest + respx · GitHub Actions · Render
 
-Full stack rationale and alternatives considered: [SDD §6](docs/SOFTWARE_DESIGN_DOCUMENT.md#6-technology-stack) and [ADRs, §21](docs/SOFTWARE_DESIGN_DOCUMENT.md#21-technology-decision-record-adr).
